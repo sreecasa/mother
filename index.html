@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Ebook</title>
+  <title>Tevaram</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,8 +24,9 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .download {
-      display: block;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
       margin: 20px 0;
     }
     .download a {
@@ -45,18 +46,31 @@
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+    p.fallback {
+      text-align: center;
+      font-style: italic;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>In memory of Makesuvariammal</h1>
+    <h1>In memory of Mother</h1>
     <p>Welcome! You can read the ebook below or download it for offline reading.</p>
     
     <div class="download">
       <a href="In memory of Mother.pdf" download>📥 Download Ebook</a>
+      <a href="In memory of Mother.pdf" target="_blank">📖 View Online</a>
     </div>
-  <div style="margin:20px auto; max-with:80px;">  
-    <embed src="In memory of Mother.pdf" type="application/pdf" width='100%" height="600px"/>
+    
+    <!-- Embedded PDF viewer -->
+    <div style="margin:20px auto; max-width:800px;">
+      <embed src="In memory of Mother.pdf" type="application/pdf" />
+    </div>
+
+    <p class="fallback">
+      If the embedded viewer doesn’t appear, use the “View Online” link above.
+    </p>
   </div>
 </body>
 </html>
